@@ -1,36 +1,34 @@
-# Basic Web Project Template
+# Otto: Your Palindrome Assistant
 
-Generic template for web projects with build-time deendencies.
+Reverses text as you type and lights up when you have a palindrom.
 
-Uses [Parcel](https://parceljs.org/) for local development server and production build.
+## Dependancies
 
-## Features
-
-#### Zero configuration support for
-- SASS/SCSS
-- JSX
-- ES6 and CommonJS module syntax
+- parcel-bundler
+- @babel/core
+- @babel/preset-env
+- sass
 
 #### Babel transpiling
-Babel is included and configured for transpiling at build time. 
-  - @babel/preset-env installed
-  - babel configuration and browserslist are in [package.json](package.json). Adjust as needed if defaults aren't to your liking. 
-  
-  Run `npx browserslist` to see a list of browsers supported based on the current content of your browserslist settings.
 
-  ## Installation
+Babel is included and configured for transpiling at build time.
 
-  - Create new repo from the template.
-  - Clone the repo to your dev environment
-  - Install node dependancies with `npm i`
-  - Make cool shit
+- @babel/preset-env installed
+- babel configuration and browserslist are in [package.json](package.json). Adjust as needed if defaults aren't to your liking.
 
-  ## Development
+Run `npx browserslist` to see a list of browsers supported based on the current content of your browserslist settings.
 
-  - `npm start` to create a development build and fire up a local server.
-  - build files are exported to the `dist` directory
+## Installation for Development
 
-  ## Build for Production
-  
-  - `npm run build` to create an optimised version for deployment
-  - build files are exported to the `dist` directory, replacing any dev files if present
+- Clone repo and cd into root directory
+- Install node dependancies with `npm i`
+
+## Development Bundling and Server
+
+- `npm start` to create a development build and fire up a local server.
+- build files are exported to the `dist` directory
+
+## Build for Production
+
+- `npm run build` to create an optimised version for deployment
+- build files are exported to the `dist` directory, replacing any dev files if present

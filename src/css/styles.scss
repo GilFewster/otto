@@ -12,5 +12,33 @@
 body,
 html {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+}
+
+#result {
+  display: flex;
+  flex-direction: row;
+  max-width: 750px;
+  margin: 0 auto;
+  justify-content: center;
+
+  p {
+  
+    margin-right: 10px;
+    border: 1px solid #333;
+    padding: .75em .5em;
+    border-radius: 5px;
+
+    &:last-child{
+      margin-right:0;
+    }
+  }
+
+  &.palindrome {
+    color: green;
+    p {
+      border-color: rgba(0,150,0,1);
+      background-color: rgba(0,255,0,.1);
+    }
+  }
 }
