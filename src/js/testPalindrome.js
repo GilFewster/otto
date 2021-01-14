@@ -47,7 +47,7 @@ const getNextLetter = (str) => {
   let match = isPalindrome(str);
   while (!match && index++ < str.length) {
     const substring = str.substring(index);
-    nextLetter = str.substring(index - 1, index);
+    nextLetter = reverseString(str.substring(0, index));
     match = isPalindrome(substring);
   }
   return nextLetter;

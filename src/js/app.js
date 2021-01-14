@@ -1,10 +1,10 @@
 import testPalindrome from './testPalindrome';
+import '../css/styles.scss';
 
 const elements = {
+  ui: document.querySelector('#ui'),
   input: document.querySelector('#txtInput'),
-  result: document.querySelector('#result'),
-  outputForwards: document.querySelector('#resultForwards'),
-  outputBackwards: document.querySelector('#resultBackwards'),
+  hint: document.querySelector('#hint'),
 };
 
 const init = () => {
@@ -13,15 +13,12 @@ const init = () => {
 };
 
 const update = () => {
-  const sourceText = elements.input.value || 'otto';
-  const result = testPalindrome(sourceText);
-
-  elements.outputForwards.innerHTML = result.testString;
-  elements.outputBackwards.innerHTML = result.reversed;
-  result.palindrome
-    ? elements.result.classList.add('palindrome')
-    : elements.result.classList.remove('palindrome');
-  console.log(result);
+  const sourceText = elements.input.value || 'zx';
+  const { palindrome, testString, nextLetter } = testPalindrome(sourceText);
+  palindrome ? elements.ui.classList.add('palindrome') : elements.ui.classList.remove('palindrome');
+  const completion = `${testString}<span>${nextLetter}</span>`;
+  elements.hint.innerHTML = completion;
+  console.log(completion);
 };
 
 init();
